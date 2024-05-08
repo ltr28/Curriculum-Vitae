@@ -1,14 +1,7 @@
 %%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
+% Date: 8 May 2024
+% Name: Luke Trenberth
+% Notes: First cut of using alta CV for writing CV
 %%%%%%%%%%%%%%%%
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
@@ -67,68 +60,20 @@
 % for \cvskill if you want to
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
-% ...and the markers for the date/location for \cvevent
-% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
-% \renewcommand{\cvLocationMarker}{\faMapMarker*}
-
-
-% If your CV/résumé is in a language other than English,
-% then you probably want to change these so that when you
-% copy-paste from the PDF or run pdftotext, the location
-% and date marker icons for \cvevent will paste as correct
-% translations. For example Spanish:
-% \renewcommand{\locationname}{Ubicación}
-% \renewcommand{\datename}{Fecha}
-
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
-% \input{pubs-authoryear.cfg}
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
-\input{pubs-num.cfg}
-
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
 
 \begin{document}
-\name{Luke Trenberth}
+\name{Luke William Trenberth}
 \tagline{Test Automation Engineer}
 %% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
-% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+\photoL{3cm}{portrait}
 
 \personalinfo{%
   % Not all of these are required!
   \email{luketrenberth@gmail.com}
   \phone{+6421 142 2402}
-  % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Christchurch, New Zealand}
-  \homepage{www.homepage.com}
-  \twitter{luketrenberth}
+  \location{New Zealand}
   \linkedin{luke-trenberth}
   \github{ltr28}
-  %% You can add your own arbitrary detail with
-  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-  %% Or you can declare your own field with
-  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-  % \gitlab{your_id}
-  %%
-  %% For services and platforms like Mastodon where there isn't a
-  %% straightforward relation between the user ID/nickname and the hyperlink,
-  %% you can use \printinfo directly e.g.
-  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
-  %% But if you absolutely want to create new dedicated info fields for
-  %% such platforms, then use \NewInfoField* with a star:
-  % \NewInfoField*{mastodon}{\faMastodon}
-  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
-  %% the full hyperlink.
-  % \mastodon{@username@instance}{https://instance.url/@username}
 }
 
 \makecvheader
@@ -136,141 +81,129 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.4}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
-\cvsection{Experience}
 
-\cvevent{Junior Test Automation Engineer}{Enphase Energy}{July 2022 -- Ongoing}{Christchurch, New Zealand}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
+  \cvsection{My Life Philosophy}
 
-\divider
+  \begin{quote}
+    ``Something smart or heartfelt, preferably in one sentence.''
+  \end{quote}
 
-\cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- December 2021}{Christchurch, New Zealand}
-\begin{itemize}
-\item Tutoring up to fifteen high school and tertiary students in: Engineering,Programming, Accounting, Calculus, Economics, Statistics, Physics and Chemistry.
-\item A busy schedule of prescribed and my own clients, requiring a range of tutoring and mentoring for a near perfect client pass record.
+  \cvsection{Most Proud of}
 
-\end{itemize}
+  \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
 
-\cvsection{Projects}
+  \divider
 
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
-\end{itemize}
+  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
 
-\divider
+  \divider
 
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
 
-\medskip
+  \cvsection{Strengths}
 
-\cvsection{A Day of My Life}
+  \cvtag{Focussed}
+  \cvtag{Analytical}
+  \cvtag{Curious}
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
+  \divider\smallskip
+
+  \cvtag{Python}
+  \cvtag{Embedded Systems}
+
+  \cvsection{Languages}
+
+  \cvskill{English}{5}
+  \divider
+
+  \cvskill{Spanish}{4}
+  \divider
+
+  \cvskill{German}{3.5} %% Supports X.5 values.
+
+  %% Yeah I didn't spend too much time making all the
+  %% spacing consistent... sorry. Use \smallskip, \medskip,
+  %% \bigskip, \vspace etc to make adjustments.
+  \medskip
+
+  \cvsection{Education}
+
+  \cvevent{Bachelor of Engineering (Hons.)}{University of Canterbury}{Feb 2017 -- Dec 2020}{}
+
+  Degree completed in 4 years. Focus on electronics and controls. Honors
+  project, implementing battery management systems for electric
+  vehicles.
+
+  \divider
+
+  \cvsection{Referees}
+
+  % \cvref{name}{email}{mailing address}
+
+  \cvref{Tony Beswick}{Enphase Energy}{tbeswick@enphaseenergy.com}
+
+  \divider
+
+  \cvref{Melanie Coker}{AHeadStart Ltd}{melanie@aheadstart.co.nz}
+
+  %% Switch to the right column. This will now automatically move to the second
+  %% page if the content is too long.
+  \switchcolumn
+
+  \cvsection{Experience}
+
+  \cvevent{Junior Test Automation Engineer}{Enphase Energy}{July 2022 -- Ongoing}{Christchurch, New Zealand}
+  \begin{itemize}
+    \item Job description 1
+    \item Job description 2
+  \end{itemize}
+
+  \divider
+
+  \cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- December 2021}{Christchurch, New Zealand}
+  \begin{itemize}
+    \item Tutoring up to fifteen high school and tertiary students in: Engineering,Programming, Accounting, Calculus, Economics, Statistics, Physics and Chemistry.
+    \item A busy schedule of prescribed and my own clients, requiring a range of tutoring and mentoring for a near perfect client pass record.
+
+  \end{itemize}
+
+  \cvsection{Projects}
+
+  \cvevent{Project 1}{Funding agency/institution}{}{}
+  \begin{itemize}
+    \item Details
+  \end{itemize}
+
+  \divider
+
+  \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+  A short abstract would also work.
+
+  \medskip
+
+  \cvsection{A Day of My Life}
+
+  % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+  % \wheelchart{outer radius}{inner radius}{
+  % comma-separated list of value/text width/color/detail}
+  \wheelchart{1.5cm}{0.5cm}{%
   6/8em/accent!30/{Sleep,\\beautiful sleep},
   3/8em/accent!40/Hopeful novelist by night,
   8/8em/accent!60/Daytime job,
   2/10em/accent/Sports and relaxation,
   5/6em/accent!20/Spending time with family
-}
+  }
 
-% use ONLY \newpage if you want to force a page break for
-% ONLY the current column
-\newpage
+  % use ONLY \newpage if you want to force a page break for
+  % ONLY the current column
+  \newpage
 
-\cvsection{next}
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
-\cvsection{My Life Philosophy}
-
-\begin{quote}
-``Something smart or heartfelt, preferably in one sentence.''
-\end{quote}
-
-\cvsection{Most Proud of}
-
-\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
-\divider
-
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-\divider
-
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-\cvsection{Strengths}
-
-\cvtag{Focussed}
-\cvtag{Analytical}
-\cvtag{Curious}
-
-\divider\smallskip
-
-\cvtag{Python}
-\cvtag{Embedded Systems}
-
-\cvsection{Languages}
-
-\cvskill{English}{5}
-\divider
-
-\cvskill{Spanish}{4}
-\divider
-
-\cvskill{German}{3.5} %% Supports X.5 values.
-
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
-\medskip
-
-\cvsection{Education}
-
-\cvevent{Bachelor of Engineering (Hons.)}{University of Canterbury}{Feb 2017 -- Dec 2020}{}
-
-Degree completed in 4 years. Focus on electronics and controls. Honors
-project, implementing battery management systems for electric
-vehicles.
-
-\divider
-
-\cvsection{Referees}
-
-% \cvref{name}{email}{mailing address}
-
-\cvref{Tony Beswick}{Enphase Energy}{tbeswick@enphaseenergy.com}
-
-\divider
-
-\cvref{Melanie Coker}{AHeadStart Ltd}{melanie@aheadstart.co.nz}
-
+  \cvsection{This is an update}
 
 \end{paracol}
 
