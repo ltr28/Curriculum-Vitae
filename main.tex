@@ -7,7 +7,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
@@ -69,6 +69,8 @@
 
 \personalinfo{%
   % Not all of these are required!
+  \divider\smallskip
+
   \email{luketrenberth@gmail.com}
   \phone{+6421 142 2402}
   \location{New Zealand}
@@ -87,23 +89,11 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 
-  \cvsection{My Life Philosophy}
+  \cvsection{About Me}
 
   \begin{quote}
-    ``Something smart or heartfelt, preferably in one sentence.''
+    With an affinity for analytical thinking, I am comfortable working collaboratively or autonomously to achieve the best outcomes. I thrive in dynamic environments and can adapt to new concepts, tools and procedures quickly.
   \end{quote}
-
-  \cvsection{Most Proud of}
-
-  \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
-  \divider
-
-  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-  \divider
-
-  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
 
   \cvsection{Strengths}
 
@@ -116,15 +106,19 @@
   \cvtag{Python}
   \cvtag{Embedded Systems}
 
-  \cvsection{Languages}
+  \divider\smallskip
 
-  \cvskill{English}{5}
+  \cvsection{Soft Skills}
+
+  \cvskill{Communication}{4.5}
+
   \divider
 
-  \cvskill{Spanish}{4}
+  \cvskill{Time Management}{4}
+
   \divider
 
-  \cvskill{German}{3.5} %% Supports X.5 values.
+  \cvskill{Problem Solving}{4.5} %% Supports X.5 values.
 
   %% Yeah I didn't spend too much time making all the
   %% spacing consistent... sorry. Use \smallskip, \medskip,
@@ -142,8 +136,6 @@
   \divider
 
   \cvsection{Referees}
-
-  % \cvref{name}{email}{mailing address}
 
   \cvref{Tony Beswick}{Enphase Energy}{tbeswick@enphaseenergy.com}
 
@@ -167,7 +159,7 @@
 
   \cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- December 2021}{Christchurch, New Zealand}
   \begin{itemize}
-    \item Tutoring up to fifteen high school and tertiary students in: Engineering,Programming, Accounting, Calculus, Economics, Statistics, Physics and Chemistry.
+    \item Tutoring up to fifteen high school and tertiary students in: Engineering, Programming, Accounting, Calculus, Economics, Statistics, Physics and Chemistry.
     \item A busy schedule of prescribed and my own clients, requiring a range of tutoring and mentoring for a near perfect client pass record.
 
   \end{itemize}
