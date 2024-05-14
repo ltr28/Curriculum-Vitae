@@ -4,40 +4,26 @@
 % Notes: Resume using alta CV
 %%%%%%%%%%%%%%%%
 
-\documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
 \geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\graphicspath{ {./img/} }
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
+\usepackage{multicol}
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-% WHEN COMPILING WITH XELATEX PLEASE USE
-% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
-\ifxetexorluatex
-  % If using xelatex or lualatex:
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
-  \renewcommand{\familydefault}{\sfdefault}
-\else
-  % If using pdflatex:
-  \usepackage[rm]{roboto}
-  \usepackage[defaultsans]{lato}
-  % \usepackage{sourcesanspro}
-  \renewcommand{\familydefault}{\sfdefault}
-\fi
+\renewcommand{\familydefault}{\sfdefault}
 
 % Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkPastelRed}{HTML}{450808}
-\definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
-
 \definecolor{DarkBlue}{HTML}{01083d}
 \definecolor{LightBlue}{HTML}{061799}
 
@@ -50,22 +36,16 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
-% Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
 \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
-
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
 
 \begin{document}
 \name{Luke William Trenberth}
 \tagline{Test Automation Engineer}
-%% You can add multiple photos on the left or right
 \photoL{3cm}{portrait}
 
 \personalinfo{%
@@ -77,7 +57,6 @@
 }
 
 \makecvheader
-\divider
 \columnratio{0.45}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
@@ -86,7 +65,7 @@
 
   \cvsection{About Me}
 
-  With an affinity for analytical thinking, I am comfortable working collaboratively or autonomously to achieve the best outcomes. 
+  With an affinity for analytical thinking, I am comfortable working collaboratively or autonomously to achieve the best outcomes.
 
   I thrive in dynamic environments and can adapt to new concepts, tools and procedures quickly.
 
@@ -108,7 +87,7 @@
   \divider
   \cvskill{Time Management}{4}
   \divider
-  \cvskill{Problem Solving}{4.5} %% Supports X.5 values.
+  \cvskill{Problem-Solving}{4.5} %% Supports X.5 values.
   \medskip
 
   \cvsection{Education}
@@ -125,19 +104,18 @@
 
   \cvsection{Experience}
 
-  \cvevent{Test Automation Engineer}{Enphase Energy}{July 2022 -- Present}{Christchurch, New Zealand}
+  \cvevent{Test Automation Engineer}{Enphase Energy}{Jul 2022 -- Present}{Christchurch, New Zealand}
   \begin{itemize}
-    \item Creating and Maintaining Test Infrastructure and Tools using Python
+    \item Creating and Maintaining Test Infrastructure using Python
     \item Designing Automated Test Cases for Validation Testing at multiple test stages
   \end{itemize}
 
   \divider
 
-  \cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- July 2022}{Christchurch, New Zealand}
+  \cvevent{Academic Tutor}{AHeadStart Limited}{Jan 2018 -- Jul 2022}{Christchurch, New Zealand}
   \begin{itemize}
-    \item High school and tertiary level students for many subjects.
-    \item A busy schedule of prescribed and my own clients, requiring a range of tutoring and mentoring for a near perfect client pass record.
-
+    \item High school and tertiary level students.
+    \item A busy schedule of prescribed and private clients.
   \end{itemize}
 
   \cvsection{Projects}
@@ -152,19 +130,28 @@
   \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
   A short abstract would also work.
 
-  \medskip
-
   \cvsection{Other Activities}
-  \wheelchart{1.5cm}{0.5cm}{%
-  8/8em/accent!60/Daytime job,
-  5/6em/accent!20/Spending time with family,
-  2/10em/accent/Sports and relaxation,
-  3/8em/accent!40/Hopeful novelist by night
-  }
+  \vspace{-0.8cm}
+  \begin{multicols}{4}
+
+    \includegraphics[width=0.07\textwidth]{hiking}
+
+    Tramping
+
+    \includegraphics[width=0.07\textwidth]{chess}
+
+    Strategy
+
+    \includegraphics[width=0.07\textwidth]{plane}
+
+    Aviation
+
+    \includegraphics[width=0.07\textwidth]{automation}
+
+    Coding
+
+  \end{multicols}
 
 \end{paracol}
-
-
-References on request
 
 \end{document}
