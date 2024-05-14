@@ -1,11 +1,8 @@
 %%%%%%%%%%%%%%%%%
 % Date: 8 May 2024
 % Name: Luke Trenberth
-% Notes: First cut of using alta CV for writing CV
+% Notes: Resume using alta CV
 %%%%%%%%%%%%%%%%
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
 
 \documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
@@ -40,12 +37,16 @@
 \definecolor{DarkPastelRed}{HTML}{450808}
 \definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
+
+\definecolor{DarkBlue}{HTML}{01083d}
+\definecolor{LightBlue}{HTML}{061799}
+
 \colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
+\colorlet{tagline}{LightBlue}
+\colorlet{heading}{DarkBlue}
 \colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
+\colorlet{subheading}{LightBlue}
+\colorlet{accent}{LightBlue}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
@@ -68,22 +69,16 @@
 \photoL{3cm}{portrait}
 
 \personalinfo{%
-  % Not all of these are required!
-  \divider\smallskip
-
   \email{luketrenberth@gmail.com}
   \phone{+6421 142 2402}
-  \location{New Zealand}
   \linkedin{luke-trenberth}
   \github{ltr28}
+  \location{Christchurch, New Zealand}
 }
 
 \makecvheader
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
-
-%% Set the left/right column width ratio to 6:4.
-\columnratio{0.4}
+\divider
+\columnratio{0.45}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
@@ -91,9 +86,9 @@
 
   \cvsection{About Me}
 
-  \begin{quote}
-    With an affinity for analytical thinking, I am comfortable working collaboratively or autonomously to achieve the best outcomes. I thrive in dynamic environments and can adapt to new concepts, tools and procedures quickly.
-  \end{quote}
+  With an affinity for analytical thinking, I am comfortable working collaboratively or autonomously to achieve the best outcomes. 
+
+  I thrive in dynamic environments and can adapt to new concepts, tools and procedures quickly.
 
   \cvsection{Strengths}
 
@@ -109,20 +104,11 @@
   \divider\smallskip
 
   \cvsection{Soft Skills}
-
   \cvskill{Communication}{4.5}
-
   \divider
-
   \cvskill{Time Management}{4}
-
   \divider
-
   \cvskill{Problem Solving}{4.5} %% Supports X.5 values.
-
-  %% Yeah I didn't spend too much time making all the
-  %% spacing consistent... sorry. Use \smallskip, \medskip,
-  %% \bigskip, \vspace etc to make adjustments.
   \medskip
 
   \cvsection{Education}
@@ -133,40 +119,30 @@
   project, implementing battery management systems for electric
   vehicles.
 
-  \divider
-
-  \cvsection{Referees}
-
-  \cvref{Tony Beswick}{Enphase Energy}{tbeswick@enphaseenergy.com}
-
-  \divider
-
-  \cvref{Melanie Coker}{AHeadStart Ltd}{melanie@aheadstart.co.nz}
-
   %% Switch to the right column. This will now automatically move to the second
   %% page if the content is too long.
   \switchcolumn
 
   \cvsection{Experience}
 
-  \cvevent{Junior Test Automation Engineer}{Enphase Energy}{July 2022 -- Ongoing}{Christchurch, New Zealand}
+  \cvevent{Test Automation Engineer}{Enphase Energy}{July 2022 -- Present}{Christchurch, New Zealand}
   \begin{itemize}
-    \item Job description 1
-    \item Job description 2
+    \item Creating and Maintaining Test Infrastructure and Tools using Python
+    \item Designing Automated Test Cases for Validation Testing at multiple test stages
   \end{itemize}
 
   \divider
 
-  \cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- December 2021}{Christchurch, New Zealand}
+  \cvevent{Academic Tutor}{AHeadStart Limited}{January 2018 -- July 2022}{Christchurch, New Zealand}
   \begin{itemize}
-    \item Tutoring up to fifteen high school and tertiary students in: Engineering, Programming, Accounting, Calculus, Economics, Statistics, Physics and Chemistry.
+    \item High school and tertiary level students for many subjects.
     \item A busy schedule of prescribed and my own clients, requiring a range of tutoring and mentoring for a near perfect client pass record.
 
   \end{itemize}
 
   \cvsection{Projects}
 
-  \cvevent{Project 1}{Funding agency/institution}{}{}
+  \cvevent{Project 1}{Enphase Energy}{}{}
   \begin{itemize}
     \item Details
   \end{itemize}
@@ -178,26 +154,17 @@
 
   \medskip
 
-  \cvsection{A Day of My Life}
-
-  % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-  % \wheelchart{outer radius}{inner radius}{
-  % comma-separated list of value/text width/color/detail}
+  \cvsection{Other Activities}
   \wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
   8/8em/accent!60/Daytime job,
+  5/6em/accent!20/Spending time with family,
   2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
+  3/8em/accent!40/Hopeful novelist by night
   }
-
-  % use ONLY \newpage if you want to force a page break for
-  % ONLY the current column
-  \newpage
-
-  \cvsection{This is an update}
 
 \end{paracol}
 
+
+References on request
 
 \end{document}
